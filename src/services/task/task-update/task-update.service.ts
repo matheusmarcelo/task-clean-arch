@@ -19,6 +19,7 @@ export class TaskUpdateService implements ITaskUpdateUseCase {
             throw new HttpException(`Task with id ${id} not found`, HttpStatus.BAD_REQUEST);
         }
 
+        task.updated_at = new Date();
         return await this.taskRepository.update(id, task);
     }
 }
