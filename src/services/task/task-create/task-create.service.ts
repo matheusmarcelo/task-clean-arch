@@ -19,7 +19,7 @@ export class TaskCreateService implements ITaskCreateUseCase {
             throw new HttpException('Task already created', HttpStatus.BAD_REQUEST);
         }
 
-        task.create_at = new Date();
+        task.created_at = new Date();
         task.status = TaskEnum.TO_DO;
 
         await this.taskRepository.create(task);
