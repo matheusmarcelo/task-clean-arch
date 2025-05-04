@@ -3,6 +3,6 @@ export class TaskEntity {
     title: string;
     description: string;
     status?: string;
-    create_at?: Date;
+    created_at?: Date;
     updated_at?: Date;
 }
