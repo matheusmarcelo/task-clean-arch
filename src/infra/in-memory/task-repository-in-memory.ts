@@ -17,7 +17,7 @@ class TaskRepositoryInMemory implements ITaskRepository {
     }
 
     async getByTitle(taskEntity: TaskEntity): Promise<TaskEntity> {
-        return this.tasks.find(task => task.title === taskEntity.title && taskEntity.status !== TaskEnum.DELETED)
+        return this.tasks.find(task => task.title === taskEntity.title && task.status !== TaskEnum.DELETED)
     }
 
     async create(task: TaskEntity): Promise<TaskEntity> {
